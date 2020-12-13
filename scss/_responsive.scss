@@ -1,0 +1,40 @@
+.show-mb {display:none !important;}
+.hide-mb {display:block !important;}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+	.top-head, .top-head ul {text-align: center !important;}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+	.show-mb {display:block !important;}
+	.hide-mb {display:none !important;}
+	.rd-hide {display: none !important;}
+	.welcome {padding:$pad * 2 0;
+		h2 {
+			span {font-size: 3rem;}
+		}
+	}
+	footer {text-align: center;
+		.col-md-3 {margin-bottom:$margin * 2;}
+	}
+	.f-btm {text-align: center;
+		ul {text-align: center;
+
+		}
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1355px) {
+	header .rd-nav li {font-size:$fnt-sz - 1;
+		a {padding:0 $pad - 5;}
+	} 
+	header .social, header .phone {font-size:$fnt-sz + 3;}
+}

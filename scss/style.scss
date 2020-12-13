@@ -1,0 +1,239 @@
+/*!
+ *  Copyright © 2020, allright reserved
+ *  Developed By : Resham Khadka
+ *	Project : Ticket Bhandar
+ */
+
+// Component
+@import "theme.scss";
+
+a, a:hover, img, img:hover, .item, .item:hover, .date, .date:hover {@include transition(0.1s);}
+
+.form-control {
+	&:focus {box-shadow:none !important; outline: none;}
+}
+
+.btn {
+	&:focus {box-shadow: none; outline: none;}
+}
+
+sup, sub {
+	font-size: 10px;
+}
+
+/* for show */
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {font-family:$dinprobold;}
+.cursive {font-family: $sparosereguler;}
+
+body {background:url("../img/world-map.png") top center no-repeat fixed #f6f6f6; background-size: cover;}
+
+.navbar-toggle {outline: none;
+    border: none;
+	background: none;
+	font-size:$fnt-sz * 2 - 4;
+}
+
+button:focus {outline: none;}
+
+.navmenu, .navbar-offcanvas {
+	width: 300px;
+	height: auto;
+	text-align: center;
+	background: transparentize($theme-color, 0.3);
+	img {width:60%; margin: $margin 0;}
+	ul {
+		li {display:block !important; text-transform: uppercase; font-size:$fnt-sz + 2;
+			a {padding: $pad - 5 0; display: block; color:$white;}
+		}
+	}
+}
+  
+  .navmenu-fixed-left, .navmenu-fixed-right, .navbar-offcanvas {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 1050;
+	overflow-y: auto;
+	border-radius: 0; }
+  
+  .navmenu-fixed-left, .navbar-offcanvas.navmenu-fixed-left {
+	right: auto;
+	left: 0; }
+  
+  .navmenu-fixed-right, .navbar-offcanvas {
+	right: 0;
+	left: auto; }
+  
+  @media (min-width: 768px) {
+	.navbar-offcanvas {
+	  width: auto;
+	  border-top: 0;
+	  box-shadow: none; }
+  
+	.navbar-offcanvas.offcanvas {
+	  position: static;
+	  display: block !important;
+	  height: auto !important;
+	  padding-bottom: 0;
+	  overflow: visible !important; } }
+  .offcanvas {
+	display: none; }
+  
+  .offcanvas.in {
+	display: block; }
+  
+  @media screen and (max-width: 767px) {
+	.offcanvas-xs {
+	  display: none; }
+  
+	.offcanvas-xs.in {
+	  display: block; } }
+  @media screen and (max-width: 991px) {
+	.offcanvas-sm {
+	  display: none; }
+  
+	.offcanvas-sm.in {
+	  display: block; } }
+  .offcanvas-lg {
+	display: none; }
+  
+  .offcanvas-lg.in {
+	display: block; }
+  
+  .canvas-sliding {
+	-webkit-transition: top .35s, left .35s, bottom .35s, right .35s;
+	transition: top .35s, left .35s, bottom .35s, right .35s; }
+  
+  .offcanvas-clone {
+	position: absolute !important;
+	top: auto !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: auto !important;
+	width: 0 !important;
+	height: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	overflow: hidden !important;
+	border: none !important;
+	opacity: 0 !important; }
+  
+  @media (min-width: 0) {
+	.navbar-toggle {
+	  display: block; /* force showing the toggle */
+	}
+  }
+  
+  @media (min-width: 992px) {
+	.navbar {
+	  right: auto;
+	  background: none;
+	  border: none;
+	}
+}
+
+.top-head {background:$alt-color; color:$white; padding:$pad - 5 0;
+	ul {
+		li {display: inline-block; padding:0 $pad - 5; text-transform: uppercase;
+			&:last-child {padding:0;}
+			a {color:$white; display:block;}
+		}
+	}
+	.t-right {text-align: right;}
+}
+
+header {padding:$pad 0; background:$white;
+	.rd-nav {font-weight: bold;
+		li {display: inline-block; text-transform: uppercase;
+			a {display: block; padding: 0 $pad + 5;}
+		}
+	}
+	.phone {text-align: right; font-size:$fnt-sz + 6; font-weight: bold;}
+	.search {text-align: right; font-size:$fnt-sz * 2 - 4;}
+}
+
+.bg-alt {background:$alt-color;}
+.bg-theme {background:$theme-color;}
+
+.btn-theme {background:$alt-color; color:$white;
+	&:hover {background:darken($alt-color, 5%);}
+}
+
+.h-booking {padding:$pad * 3 0; color:$white;
+	.form-control {border-radius:5px;}
+	label {text-transform: uppercase; font-size:$fnt-sz - 2;}
+	.btn-default {background:$alt-color;
+		&:hover {background:darken($alt-color, 5%);}
+	}
+}
+
+.hot-offer {margin-bottom:$margin * 3;
+	h2 {text-align: center; font-size:$fnt-sz * 2; padding-bottom:$pad; margin-bottom:$margin; position:relative;
+		&:before {content:" "; width:400px; height:3px; background:$alt-color; position:absolute; left:0; right:0; bottom:0; margin:auto;}
+	}
+	p {text-align: center; margin-bottom:$margin * 2;}
+	h3 {font-size:$fnt-sz + 4; margin-bottom:$margin;}
+	span.price {display: block; color:$alt-color; font-size: $fnt-sz * 2;}
+	span.avg {font-size:$fnt-sz - 2; text-transform: uppercase;}
+}
+
+.banner {
+	img {margin:0 auto;}
+	.owl-theme .owl-nav.disabled+.owl-dots {bottom: 5px; z-index: 9; position: absolute; width: 100%;}
+}
+
+.btn-default {background:$theme-color; color:$white;
+	&:hover {background: darken($theme-color, 5%); color:$white !important;}
+}
+
+footer {background: $theme-color; padding: $pad * 2 0; color:$white;
+	h4 {margin-bottom:$margin; font-size:$fnt-sz + 6; position: relative; padding-bottom: $pad - 5;
+		&:before {content: ""; position: absolute; width:90px; height:3px; background:$alt-color; bottom:0;}
+	}
+	.contact {
+		p {margin-bottom:$margin;}
+	}
+	ul {
+		li {margin-bottom: $margin - 5;
+			a {color:darken($white, 2%);
+				&:hover {color:$alt-color !important;}
+			}
+		}
+	}
+	.newsletter {
+		label {font-size:$fnt-sz - 2; line-height: normal; margin-bottom:$margin - 5;}
+		.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {border-top-left-radius: 5px; border-bottom-left-radius: 5px;}
+		.social {
+			li {display:inline-block; margin:0 $margin - 10;
+				a {display:block; width:30px; height:30px; line-height: 30px;}
+			}
+		}
+	}
+}
+.f-btm {background:$alt-color; padding:$pad - 5 0; font-size:$fnt-sz - 2; color:$white;
+	ul {text-align: right;
+		li {display: inline-block; padding:0 $pad;
+			a {color:$white;}
+			&:last-child {padding:0;}
+		}
+	}
+}
+
+#back-top {display: inline-block; background-color: $theme-color; width: 40px; height: 40px; border-radius:100%; text-align: center; position: fixed; bottom: 30px; right: 30px; transition: background-color .3s, opacity .5s, visibility .5s; opacity: 0; visibility: hidden; z-index: 1000;
+	&:after {content: "\f077"; font-family: "Font Awesome 5 Pro"; font-weight: normal; font-style: normal; font-size: 1.5em; line-height: 40px; color: #fff;}
+	&:hover {cursor: pointer; background-color: #333;}
+}
+#back-top:active {
+  background-color: #555;
+}
+#back-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Responsive
+@import "responsive.scss";

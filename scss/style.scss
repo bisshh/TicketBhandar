@@ -198,7 +198,7 @@ header {padding:$pad 0; background:$white;
 	.close {padding: $pad; border-bottom:1px solid $rd-color;}
 	.tdetail {overflow-y: scroll; height: 75%;
 		h2 {font-size:$fnt-sz * 2;}
-		h3 {font-size:$fnt-sz * 2 - 4;}
+		h3 {font-size:$fnt-sz * 2 - 8;}
 		p {font-size:$fnt-sz;}
 		.twrap {padding:$pad; border-bottom:1px solid darken($white, 50%);}
 		.tbook-info {border-radius:8px; border:2px solid $theme-color; padding:$pad * 2; margin:$margin 0;

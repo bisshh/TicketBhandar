@@ -194,6 +194,23 @@ header {padding:$pad 0; background:$white;
 	&:hover {background: darken($theme-color, 5%); color:$white !important;}
 }
 
+.tdetails {background:$white; height: 100%; width:33.33%; box-shadow: 0 0.5rem 1rem 0 rgba(0, 11, 38, 0.24); position: fixed; right:0; z-index: 999;
+	.close {padding: $pad; border-bottom:1px solid $rd-color;}
+	.tdetail {overflow-y: scroll; height: 75%;
+		h2 {font-size:$fnt-sz * 2;}
+		h3 {font-size:$fnt-sz * 2 - 4;}
+		p {font-size:$fnt-sz;}
+		.twrap {padding:$pad; border-bottom:1px solid darken($white, 50%);}
+		.tbook-info {border-radius:8px; border:2px solid $theme-color; padding:$pad * 2; margin:$margin 0;
+			.price {font-size:$fnt-sz * 2;}
+		}
+	}
+	.total {width:100%; bottom:0; position: absolute; padding:$pad * 2; box-shadow: 0 0.5rem 1rem 0 rgba(0, 11, 38, 0.24);
+		span {display:block; font-size: $fnt-sz;}
+		span.price {font-size:$fnt-sz * 2; color:$alt-color; font-weight: bold; margin-bottom:$margin;}
+	}
+}
+
 .main-content {
 	.quick-filter {background:$white; padding: $pad; border-top:2px solid #ebecf0;
 		.btn-white {border:1px solid #ced4da;}

@@ -7,7 +7,7 @@
 // Component
 @import "theme.scss";
 
-a, a:hover, img, img:hover, .item, .item:hover, .date, .date:hover {@include transition(0.1s);}
+a, a:hover, img, img:hover, .item, .item:hover, .date, .date:hover, .tsummary, .tsummary:hover {@include transition(0.1s);}
 
 .form-control {
 	&:focus {box-shadow:none !important; outline: none;}
@@ -163,6 +163,10 @@ header {padding:$pad 0; background:$white;
 	&:hover {background:darken($alt-color, 5%);}
 }
 
+.btn-alt {background:$theme-color; color:$white;
+	&:hover {background:darken($theme-color, 5%); color:$white !important;}
+}
+
 .h-booking {padding:$pad * 3 0; color:$white;
 	.form-control {border-radius:5px;}
 	label {text-transform: uppercase; font-size:$fnt-sz - 2;}
@@ -188,6 +192,47 @@ header {padding:$pad 0; background:$white;
 
 .btn-default {background:$theme-color; color:$white;
 	&:hover {background: darken($theme-color, 5%); color:$white !important;}
+}
+
+.main-content {
+	.quick-filter {background:$white; padding: $pad; border-top:2px solid #ebecf0;
+		.btn-white {border:1px solid #ced4da;}
+		label {font-size:$fnt-sz - 2; margin-bottom:$margin - 10; text-transform: uppercase;}
+	}
+	.qsummary {
+		h2 {font-size: $fnt-sz * 2; margin-bottom: $margin - 10;}
+		p {color: darken($white, 45%);}
+		.twrap {padding:$pad; background:$white; text-align: center; border-radius:5px;
+			span {font-size: $fnt-sz - 2; display: block;}
+			span.price {color:$red; font-size:$fnt-sz + 4;}
+		}
+	}
+	.list {background:#ebecf0; padding:$pad + 5 0;
+		.filter {border-radius: 5px; background:$white; padding:$pad;
+			h2 {font-size:$fnt-sz + 6; margin-bottom: $margin;}
+			h4 {font-weight: 300; margin-bottom:$margin - 5;}
+			.dwrap {border:1px solid #ebecf0; border-radius:5px; padding:5px; margin-bottom:$margin; text-align:center;
+				.fas {display: block; width:100%;}
+				span {font-size:$fnt-sz - 2; display: block;}
+				&:hover {background:darken($white, 5%);}
+			}
+		}
+		.tsummary {padding:$pad; border-radius:5px; background:$white; margin-bottom:$margin;
+			.airline {text-align: center; font-size:$fnt-sz - 2; text-transform: uppercase;
+				span {display: block;}
+			}
+			.ptitle {background:darken($theme-color, 5%); padding: $pad - 10 $pad; border-radius:5px; color:$white;}
+			table {margin:0;
+				b, span {display: block; text-transform: uppercase;}
+			}
+			.tmore {padding:5px; border-radius: 5px; background:darken($white, 5%); font-size:$fnt-sz - 1;}
+			.price {text-align: center;
+				span {display: block;}
+				span.price {color:$red; font-size:$fnt-sz * 2; font-weight: bold;}
+			}
+			&:hover {box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);}
+		}
+	}
 }
 
 footer {background: $theme-color; padding: $pad * 2 0; color:$white;
